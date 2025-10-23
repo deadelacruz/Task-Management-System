@@ -1,0 +1,102 @@
+.App {
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 20px;
+  margin: -20px -20px 30px -20px;
+  border-radius: 0 0 20px 20px;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-buttons .btn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.filter-buttons .btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.filter-buttons .btn.btn-success {
+  background: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.filter-buttons .btn.btn-success:hover:not(:disabled) {
+  background: #218838;
+  border-color: #218838;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* Error Message Styling */
+.error {
+  background: linear-gradient(135deg, #fee 0%, #fdd 100%);
+  color: #721c24;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #dc3545;
+  box-shadow: 0 2px 4px rgba(220, 53, 69, 0.1);
+}
+
+.error button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  .task-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .task-actions {
+    margin-top: 10px;
+    justify-content: center;
+  }
+  
+  .filter-buttons {
+    flex-direction: column;
+  }
+  
+  .filter-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
